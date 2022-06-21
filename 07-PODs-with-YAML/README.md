@@ -18,7 +18,7 @@ spec:
 apiVersion: v1 # String
 kind: Pod  # String
 metadata: # Dictionary
-  name: myapp-pod
+  name: myapp-pod  # This Pod label we will be using in NodePort Manifest
   labels: # Dictionary 
     app: myapp         
 spec:
@@ -50,7 +50,7 @@ spec:
   type: NodePort
   selector:
   # Loadbalance traffic across Pods matching this label selector
-    app: myapp
+    app: myapp  # The traffic from NodePort is directed toward the Pod whose label matches to this.
   # Accept traffic sent to port 80    
   ports: 
     - name: http
