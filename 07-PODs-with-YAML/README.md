@@ -18,9 +18,9 @@ spec:
 apiVersion: v1 # String
 kind: Pod  # String
 metadata: # Dictionary
-  name: myapp-pod  # This Pod label we will be using in NodePort Manifest
+  name: myapp-pod  
   labels: # Dictionary 
-    app: myapp         
+    app: myapp   # This Pod label we will be using in NodePort Manifest      
 spec:
   containers: # List
     - name: myapp
